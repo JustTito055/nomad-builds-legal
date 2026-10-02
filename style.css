@@ -1,0 +1,41 @@
+:root {
+  --bg: #F2E8D5;
+  --ink: #1C1B18;
+  --muted: #5E5A50;
+  --accent: #C1531B;
+  --card: #FFF8EC;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1C1B18;
+    --ink: #F2E8D5;
+    --muted: #B8AE9B;
+    --accent: #C1531B;
+    --card: #26241F;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, 'Work Sans', system-ui, sans-serif;
+  line-height: 1.6;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header.site { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+header.site .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--ink); text-decoration: none; }
+header.site .brand img { width: 36px; height: 36px; border-radius: 8px; }
+nav a { color: var(--accent); margin-left: 16px; text-decoration: none; font-size: 14px; }
+nav a:first-child { margin-left: 0; }
+nav a:hover { text-decoration: underline; }
+h1 { font-size: 32px; line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 20px; margin-top: 48px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
+p, li { font-size: 15px; }
+.lead { font-size: 18px; color: var(--muted); }
+.updated { color: var(--accent); font-size: 13px; margin-bottom: 32px; }
+.steps { list-style: none; padding: 0; counter-reset: step; }
+.steps li { counter-increment: step; background: var(--card); border-radius: 10px; padding: 14px 16px 14px 52px; margin-bottom: 10px; position: relative; }
+.steps li::before { content: counter(step); position: absolute; left: 16px; top: 14px; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; display: grid; place-items: center; }
+footer.site { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--muted); font-size: 13px; color: var(--muted); }
+footer.site a { color: var(--accent); margin-right: 16px; }

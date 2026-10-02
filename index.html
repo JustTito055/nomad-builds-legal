@@ -3,60 +3,43 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
 <title>Nomad Builds</title>
-<style>
-  :root {
-    --bg: #F2E8D5;
-    --ink: #1C1B18;
-    --accent: #C1531B;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #1C1B18;
-      --ink: #F2E8D5;
-      --accent: #C1531B;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: -apple-system, 'Work Sans', system-ui, sans-serif;
-    line-height: 1.6;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 96px; }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 20px; margin-top: 48px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
-  p, li { font-size: 15px; }
-  .updated { color: var(--accent); font-size: 13px; margin-bottom: 32px; }
-  nav { margin-bottom: 32px; font-size: 14px; }
-  nav a { color: var(--accent); margin-right: 16px; text-decoration: none; }
-  nav a:hover { text-decoration: underline; }
-</style>
+<meta name="description" content="Nomad Builds is a content channel with its own publishing tool that posts finished videos to the channel's TikTok, YouTube and Instagram accounts.">
 </head>
 <body>
 <div class="wrap">
+  <header class="site">
+    <a class="brand" href="index.html"><img src="icon.png" alt="">Nomad Builds</a>
+    <nav><a href="index.html">Home</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+  </header>
+
   <h1>Nomad Builds</h1>
-  <p class="updated">Last updated: September 26, 2026</p>
-  <nav><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a></nav>
+  <p class="lead">Nomad Builds is a content channel that publishes short-form videos on TikTok, YouTube and Instagram. Behind the channel runs Nomad Builds Automation, our own publishing tool that takes a finished, approved video and posts it to the channel's accounts.</p>
 
-  <h2 id="terms">Terms of Service</h2>
-  <p>Nomad Builds is a personal content channel. These terms apply to the automated publishing tool used to manage and post content to this channel's connected social media accounts (TikTok, YouTube, Instagram).</p>
-  <ul>
-    <li>The tool is used solely to publish content created for the Nomad Builds channel.</li>
-    <li>All content is reviewed and approved by the channel owner before publishing.</li>
-    <li>This tool does not accept content submissions from, or act on behalf of, any third party.</li>
-  </ul>
+  <h2 id="tool">How the publishing tool works</h2>
+  <ol class="steps">
+    <li><strong>Connect TikTok.</strong> The channel owner signs in with TikTok through TikTok's official Login Kit and approves the requested permissions. Nomad Builds Automation never sees or stores the TikTok password.</li>
+    <li><strong>Prepare the video.</strong> A finished video is placed in the publishing queue together with its caption.</li>
+    <li><strong>Review and approve.</strong> The channel owner checks the video, caption and privacy setting before anything is posted.</li>
+    <li><strong>Publish.</strong> The tool uploads the approved video to the connected TikTok account through the official Content Posting API and checks that the post went through.</li>
+  </ol>
 
-  <h2 id="privacy">Privacy Policy</h2>
-  <p>This publishing tool only accesses the data required to post content to the Nomad Builds channel's own connected accounts via each platform's official API.</p>
+  <h2 id="permissions">What we use from TikTok</h2>
   <ul>
-    <li>No personal data from viewers or followers is collected, stored, or shared.</li>
-    <li>Access tokens are used only to publish content to the Nomad Builds accounts and are stored securely by the channel owner.</li>
-    <li>No data is sold or shared with third parties.</li>
+    <li><strong>user.info.basic</strong> and <strong>user.info.profile</strong>: to show which TikTok account is connected, so the owner can confirm videos go to the right account.</li>
+    <li><strong>video.upload</strong> and <strong>video.publish</strong>: to upload and post the approved videos to that account.</li>
   </ul>
-  <p>Questions? Contact: nomadbuilds.studio@gmail.com</p>
+  <p>We only use this access to publish Nomad Builds content. See the <a href="privacy.html">Privacy Policy</a> for how data is handled.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions about Nomad Builds or the publishing tool: <a href="mailto:nomadbuilds.studio@gmail.com">nomadbuilds.studio@gmail.com</a></p>
+
+  <footer class="site">
+    <p>&copy; 2026 Nomad Builds &middot; <a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="mailto:nomadbuilds.studio@gmail.com">Contact</a></p>
+  </footer>
 </div>
 </body>
 </html>
